@@ -1,0 +1,21 @@
+https://start.spring.io/
+
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=3.2.0&packaging=jar&jvmVersion=17&groupId=com.arch&artifactId=enemy&name=enemy&description=Demo%20project%20for%20Spring%20Boot&packageName=com.arch.enemy&dependencies=web
+
+>> initialization of project from above link
+>> create workspace on vs code add archenemy folder
+
+Error:
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project enemy: Fatal error compiling: error: release version 17 not supported -> [Help 1]
+
+>> check the java version in pom.xml make it to 11
+
+
+Error:
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project enemy: Compilation failure: Compilation failure: 
+[ERROR] /home/rahul/Desktop/Archenemy/enemy/src/main/java/com/arch/enemy/EnemyApplication.java:[3,32] cannot access org.springframework.boot.SpringApplication
+[ERROR]   bad class file: /home/rahul/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar(/org/springframework/boot/SpringApplication.class)
+
+>> change the spring boot version to <version>2.7.17</version>
+
+>> 
